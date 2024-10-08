@@ -4,6 +4,10 @@ arr = np.arange(1, 11)
 print(arr.ndim, arr.shape, arr.dtype)
 
 # 2.task
+# Добавьте в массив [1, 2, 3] элементы [6, 7, 8] и выведите результат.
+arr = np.array([1, 2, 3])
+arr = np.append(arr, [6, 7, 8])
+print(arr)
 
 # 3.task
 
