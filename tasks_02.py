@@ -110,16 +110,10 @@ arr[arr > median_value] = arr[arr > median_value] ** 2
 print(np.round(arr, 2))
 
 # 18.task
-
-# 19.task
-
-# 20.task
-
-# 21.task
-
-# 22.task
-
-# 23.task
-
-# 24.task
+# Создайте массив 3x4 из случайных чисел от 0 до 20. Для каждого столбца найдите разность между максимальным и минимальным элементами.
+arr = np.random.randint(0, 21, (3, 4))
+max_elements = np.max(arr, axis=0)
+min_elements = np.min(arr, axis=0)
+diff = max_elements - min_elements
+print(diff)
 
