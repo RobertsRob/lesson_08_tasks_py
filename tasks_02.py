@@ -103,8 +103,8 @@ new_arr = np.concatenate((arr1[arr1 > mean_arr1], arr2[arr2 > mean_arr2]))
 print(new_arr)
 
 # 17.task
-# Создайте массив размером 4x4, заполненный случайными числами. Замените все элементы, которые больше медианы этого массива, на их квадрат.
-arr = np.random.rand(4, 4)
+# Создайте массив размером 9, заполненный случайными числами. Замените все элементы, которые больше медианы этого массива, на их квадрат.
+arr = np.random.rand(9)
 median_value = np.median(arr)
 arr[arr > median_value] = arr[arr > median_value] ** 2
 print(np.round(arr, 2))
