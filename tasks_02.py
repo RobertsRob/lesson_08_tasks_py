@@ -57,16 +57,50 @@ arr = arr[arr % 10 == 0]
 print(arr)
 
 # 11.task
+# Создайте массив из 8 случайных чисел и отсортируйте его в порядке убывания.
+arr = np.random.rand(8)
+arr_sorted = np.sort(arr)[::-1]
+print(arr_sorted)
 
 # 12.task
+# Создайте двумерный массив размером 5x5, заполненный случайными числами от 0 до 50. Измените все элементы на четных позициях на -1.
+arr = np.random.randint(0, 51, (5, 5))
+arr[::2, ::2] = -1
+print(arr)
 
 # 13.task
+# Создайте два массива из 10 случайных чисел. Выведите их поэлементную сумму и разность.
+arr1 = np.random.rand(10)
+arr2 = np.random.rand(10)
+print("Сумма:", arr1 + arr2)
+print("Разность:", arr1 - arr2)
 
 # 14.task
+# Создайте массив из чисел от 1 до 12 и преобразуйте его в массив 3x4. Затем выведите только элементы, которые больше среднего значения этого массива.
+arr = np.arange(1, 13).reshape(3, 4)
+mean_value = np.mean(arr)
+arr_filtered = arr[arr > mean_value]
+print(arr_filtered)
 
 # 15.task
+# Создайте массив из чисел от 1 до 30. Преобразуйте его в массив 3x2x5 и найдите сумму элементов, у которых сумма индексов кратна 3.
+arr = np.arange(1, 31).reshape(3, 2, 5)
+s = 0
+for i in range(arr.shape[0]):
+    for j in range(arr.shape[1]):
+        for k in range(arr.shape[2]):
+            if (i + j + k) % 3 == 0:
+                s += arr[i, j, k]
+print(s)
 
 # 16.task
+# Создайте два массива: первый — из чисел от 1 до 9, второй — из чисел от 9 до 1. Найдите элементы, которые больше среднего значения в обоих массивах, и создайте новый массив из этих элементов.
+arr1 = np.arange(1, 10)
+arr2 = np.arange(9, 0, -1)
+mean_arr1 = np.mean(arr1)
+mean_arr2 = np.mean(arr2)
+new_arr = np.concatenate((arr1[arr1 > mean_arr1], arr2[arr2 > mean_arr2]))
+print(new_arr)
 
 # 17.task
 
